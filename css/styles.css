@@ -1,0 +1,30 @@
+body *{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-weight: 1200;
+}
+
+body {
+  background-color: rgb(237, 234, 223);
+}
+
+.page {
+  background-color: rgb(237, 234, 223);
+  padding: 50px;
+  padding-top: 35px;
+}
+
+.vis-container {
+  width: 100%;
+}
+
+.pure-g {
+  margin-bottom: 40px;
+}
+
+#title{
+  font-size: large;
+  text-align: center;
+}

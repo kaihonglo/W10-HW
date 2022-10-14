@@ -1,3 +1,10 @@
+.page {
+  width: 1080px;
+  background-color: #f0f3fa;
+  margin: auto;
+  padding-top: 35px;
+}
+
 body *{
   font-family: 'Open Sans', sans-serif;
 }
@@ -6,12 +13,22 @@ h1 {
   font-weight: 1200;
 }
 
+h2 {
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h3{
+  text-align: center;
+}
+
 body {
-  background-color: rgb(237, 234, 223);
+  background-color: #f0f3fa;
 }
 
 .page {
-  background-color: rgb(237, 234, 223);
+  background-color: #f0f3fa;
   padding: 50px;
   padding-top: 35px;
 }
@@ -27,4 +44,102 @@ body {
 #title{
   font-size: large;
   text-align: center;
+  color: #3b4c72;
 }
+
+#outline{
+  outline-style: dashed;
+  outline-color: #3b4c72;
+  outline-offset: 10px;
+}
+
+.footer{
+  font-size: small;
+  text-align: right;
+}
+
+.circle{
+  background: #f0f3fa;
+  width: 150px;
+  height: 150px;
+  border: 30px solid #3b4c72;
+  border-radius: 50%;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle p {
+  font-size: large;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.textContainerLeft {
+  margin: 0;
+  position: relative;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  text-align: justify;
+}
+
+.textContainerRight {
+  margin: 0;
+  position: relative;
+  top: 40%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  text-align: justify;
+}
+
+#highlight{
+  font-weight: bolder;
+  color:#3b4c72;
+}
+
+#highlightEAP{
+  font-weight: bolder;
+  color:#1170aa;
+}
+
+#highlightEUCA{
+  font-weight: bolder;
+  color:#fc7d0b;
+}
+
+#highlighLAC{
+  font-weight: bolder;
+  color:#a3acb9;
+}
+
+#highlightMENA{
+  font-weight: bolder;
+  color:#57606c;
+}
+
+#highlightNA{
+  font-weight: bolder;
+  color:#5fa2ce;
+}
+
+#highlightSA{
+  font-weight: bolder;
+  color:#c85200;
+}
+
+#highlightSSA{
+  font-weight: bolder;
+  color:#ffbc79;
+}
+
+
+

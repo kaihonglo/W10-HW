@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Week 10 Homework</title>
+  <title>Assignment 2</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -29,13 +29,51 @@
   <div class="page">
 
     <!-- pure grid group -->
-    <div class="pure-g">
+    <div class="pure-g" >
       <div class="pure-u-1-1">
         <div id="title">
-          <h1>Week 10 Homework</h1>
-          <p>by: 31860788 Lo Kai Hong</p>
+          <h1 style="font-size: xxx-large;">World CO2 Emission</h1>
+          <p>Analysis of CO2 Emission around the world from 1990 - 2019</p>
         </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
 
+    <!-- pure grid group -->
+    <div id = "circles" class="pure-g">
+      <div class="pure-u-1-3">
+        <div id="circle1" class="circle">
+          <p>30 Years</p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="circle2" class="circle">
+          <p>215 Countries</p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="circle3" class="circle">
+          <p>7 Regions</p>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div id="textIntro" class="textContainerLeft">
+          <p><span id ="highlight">Carbon dioxide (CO2) emissions</span> are the <span id ="highlight">primary driver of global climate change.</span> 
+            It's widely recognised that to avoid the worst impacts of climate change, the <span id ="highlight">world needs to urgently reduce emissions. </span>
+            But, how this responsibility is shared between regions, countries, and individuals has been an endless point of contention in international discussions. 
+            <a href="https://ourworldindata.org/co2-emissions">(Our World In Data, n.d.)</a></p>
+          <p>How have global emissions of carbon dioxide (CO2) changed over time?
+            In this chart we see on average, the trends and change of regional emissions from the year 1990 through to 2019.</p>
+          <p>It can be seen that the <span id="highlightEUCA">European and Central Asian</span> region are the <span id ="highlight">leaders in CO2 Emission around the world</span>, but this could be explained by their large population and land</p>
+        </div>
+      </div>
+      <div class="pure-u-2-3">
+        <div id="lineVis" class="vis-container"></div>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -43,33 +81,170 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <div id="vis1" class="vis-container"></div>
+        <div id = "outline">
+          <h3>CO2 Emissions (metric ton per capita) around the world in 2019</h3>
+        <div id="mapVis" class="vis-container"></div>
+      </div>
+        <br><br>
+        <p>As shown in the map above, the countries that are among the <span id ="highlight">HIGHEST CO2 Emission per capita</span> in the year 2019 were 
+          <span id ="highlightNA">The United States</span>, <span id ="highlightNA">Canada</span>, 
+          <span id ="highlightMENA">Saudi Arabia</span>, <span id ="highlightEAP">Australia</span>, 
+          <span id ="highlightMENA">Oman</span></p>
+
+          <p>But those are large countries that can be easily seen on the map, when zoomed in the Middle East, it is revealed that countries like 
+            <span id ="highlightMENA">Qatar</span> and <span id ="highlightMENA">Kuwait</span> have <span id ="highlight">even higher CO2 Emission per capita</span> than the countries above.
       </div>
     </div>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-1">
-        <div id="vis2" class="vis-container"></div>
+      <div class="pure-u-2-3">
+        <div ><div id="combinedVis" class="vis-container"></div></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="textContainerRight">
+          <p>Here it is shown more clearly in the Pie Chart that <span id="highlightEUCA">Europe & Central Asia</span> take up a <span id="highlight">high percentage</span>
+            of the Global CO2 Emission, where it is <span id="highlight">more than 50% in the year 1990</span> but has since decreased. 
+          </p>
+          <p>It is also shown, that <span id="highlightNA">North America</span> take up a <span id="highlight">low percentage</span>
+            of the Global CO2 Emission but has the <span id="highlight">greatest average region CO2 Emission</span>, this could be due to it having
+            a low number of countries but a large populations and land. 
+          </p>
+        </div>
       </div>
     </div>
     <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="textContainerLeft">
+          <p>The visualisation on the right is a <span id="highlight">boxplot</span> which is a chart that shows statistics on the CO2 Emission of each country 
+          </p>
+          <p>It is filtered according to region since it is somewhat unreadable for all regions
+          </p>
+          <p>The statistics include the <span id="highlight">minimum(Min), first quartile(Q1), median(Q2), 
+            third quartile(Q3) and the maximum(Max)</span> of CO2 emission for each country over the years
+          </p>
+          <p>With this chart, we are able to see if a country has high CO2 Emission for many years, or if that year was an <span id="highlight">outlier</span> .  
+          </p>
+        </div>
+      </div>
+      <div class="pure-u-2-3">
+        <div id="boxplotVis" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <br>
+    <h2>Year Comparisons</h2>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="chartVis" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-1">
+        <br><br>
+        <p>The scatterplot chart above <span id="highlight">compares</span> the CO2 Emission values of each country between the year <span id="highlight">1990</span> and <span id="highlight">2019</span>
+        </p>
+        <p>Meanwhile, the scatterplot matrix below <span id="highlight">compares</span> the CO2 Emission values of each country between every 10 year 
+          (<span id="highlight">1999</span>, <span id="highlight">2009</span>, and <span id="highlight">2019</span>)
+        </p>
+      </div>
+      <div class="pure-u-1-1">
+        <div id="spmVis" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <br><br>
+    <h2>Global</h2>
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div id = "outline"class="pure-u-1-1">
+        <div id="globalVis" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-1">
+        <br><br>
+        <p> It can be seen that the <span id="highlight">peak global CO2 Emission</span> from 1990 - 2019 was at <span id="highlight">2009</span>, 
+          and the <span id="highlight">lowest</span> was at <span id="highlight">1994</span>
+        </p>
+        <p> This chart reveals a trend which suggests that we are on a <span id="highlight">decreasing(improving) trend</span>, meaning global CO2 Emissions are decreasing every year.
+        </p>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+    <br><br>
+    <h2>Summary</h2>
+    <!-- pure grid group -->
+    <div id = "circles" class="pure-g">
+      <div class="pure-u-1-3">
+        <div id="circle1" class="circle">
+          <p>Peak CO2 Emission: <span id="highlight">2009</span></p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="circle2" class="circle">
+          <p>Highest CO2 Emitting Country: <span id="highlightMENA">Qatar</span></p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="circle3" class="circle">
+          <p>Highest CO2 Emitting Region: <span id="highlightEUCA">European and Central Asian</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <div class="footer l-box">
+      <p>
+        <p>This visualisation is created by <a href="https://github.com/kaihonglo">Lo Kai Hong</a> for FIT3179</p>
+      </p>
+    </div>
+    <!-- pure grid group -->
 
   </div> <!-- end page -->
 
   <script type="text/javascript">
-    var specVis1 = "js/chart.vg.json";
-    var specVis2 = "js/map.vg.json";
+    var chartVis = "js/chart.vg.json";
+    var mapVis = "js/map.vg.json";
+    var spmVis = "js/scatterplotmatrix.vg.json";
+    var combinedVis = "js/combined.vg.json";
+    var boxplotVis = "js/boxplot.vg.json";
+    var lineVis = "js/line.vg.json";
+    var globalVis = "js/global.vg.json";
 
-    vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
+    vegaEmbed('#chartVis', chartVis, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+    vegaEmbed('#mapVis', mapVis, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
+    vegaEmbed('#spmVis', spmVis, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#combinedVis', combinedVis, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#boxplotVis', boxplotVis, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#lineVis', lineVis, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#globalVis', globalVis, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
   </script>
 </body>
 

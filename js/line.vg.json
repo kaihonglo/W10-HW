@@ -1,0 +1,64 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height": 350,
+    "width":"container",
+    "background":"#f0f3fa",
+    "title":"Total CO2 Emission per Region over time",
+    "data": {
+        "url": "https://raw.githubusercontent.com/kaihonglo/A2/main/data/CO2_emission_long.csv"},    "encoding": {
+        "x": {"field": "Year", "axis":{"grid": false, "labelAngle":-45}, "title":"Year"},
+        "y": {"aggregate":"sum", "field": "Value", "type": "quantitative", "title":"Region Sum CO2 Emission (metric ton per capita)"},
+      "color": {
+        "condition": {
+          "param": "hover",
+          "field":"Region",
+          "type":"nominal",
+          "scale":{
+            "domain": [
+                "East Asia & Pacific",
+                "Europe & Central Asia",
+                "Latin America & Caribbean",
+                "Middle East & North Africa",
+                "North America",
+                "South Asia",
+                "Sub-Saharan Africa"
+            ],
+            "range": [
+                "#1170aa",
+                "#fc7d0b",
+                "#a3acb9",
+                "#57606c",
+                "#5fa2ce",
+                "#c85200",
+                "#ffbc79"
+            ]
+        }
+        },
+        "value": "grey"
+      },
+      "opacity": {
+        "condition": {
+          "param": "hover",
+          "value": 1
+        },
+        "value": 0.2
+      }
+    },
+    "layer": [{
+      "description": "transparent layer to make it easier to trigger selection",
+      "params": [{
+        "name": "hover",
+        "value": [{"Region": "North America"}],
+        "select": {
+          "type": "point",
+          "fields": ["Region"],
+          "on": "mouseover"
+        }
+      }],
+      "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+    }, {
+      "mark": "line"
+    }],
+    "config": {"view": {"stroke": null}}
+  }
+  

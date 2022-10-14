@@ -1,0 +1,89 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "CO2 Emissions Statistics",
+    "height": 400,
+    "width": "container",
+    "background": "#f0f3fa",
+    "data": {
+        "url": "https://raw.githubusercontent.com/kaihonglo/A2/main/data/CO2_emission_long.csv"
+    },
+    "params": [
+        {
+            "name": "region_selection",
+            "value":"East Asia & Pacific",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "East Asia & Pacific",
+                    "Europe & Central Asia",
+                    "Latin America & Caribbean",
+                    "Middle East & North Africa",
+                    "North America",
+                    "South Asia",
+                    "Sub-Saharan Africa"
+                ],
+                "labels": [
+                    "Show All Region (hard to see)",
+                    "East Asia & Pacific",
+                    "Europe & Central Asia",
+                    "Latin America & Caribbean",
+                    "Middle East & North Africa",
+                    "North America",
+                    "South Asia",
+                    "Sub-Saharan Africa"
+                ],
+                "name": "Region Selection: "
+            }
+        }
+    ],
+    "transform": [
+        {
+            "filter": "region_selection == null || datum.Region == region_selection"
+        }
+    ],
+    "mark": {"type":"boxplot", "ticks":true},
+    "encoding": {
+        "x": {
+            "field": "Country Name",
+            "type": "nominal",
+            "axis": {
+                "labelAngle": -45
+            },
+            "title":null
+        },
+        "color": {
+            "field": "Region",
+            "type": "nominal",
+            "legend": null,
+            "scale": {
+                "domain": [
+                    "East Asia & Pacific",
+                    "Europe & Central Asia",
+                    "Latin America & Caribbean",
+                    "Middle East & North Africa",
+                    "North America",
+                    "South Asia",
+                    "Sub-Saharan Africa"
+                ],
+                "range": [
+                    "#1170aa",
+                    "#fc7d0b",
+                    "#a3acb9",
+                    "#57606c",
+                    "#5fa2ce",
+                    "#c85200",
+                    "#ffbc79"
+                ]
+            }
+        },
+        "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "scale": {
+                "zero": false
+            },
+            "title": "CO2 Emissions"
+        }
+    }
+}

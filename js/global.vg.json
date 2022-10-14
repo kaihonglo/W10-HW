@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 350,
+  "width":"container",
+  "background": "#f0f3fa",
+  "title": "Global CO2 Emission per Region over time",
+  "data": {
+    "url": "https://raw.githubusercontent.com/kaihonglo/A2/main/data/CO2_emission_long.csv"
+  },
+  "mark": {"type":"trail", "point":true},
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "axis": {
+        "grid": false,
+        "labelAngle": -45
+      },
+      "title": "Year"
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "Value",
+      "type": "quantitative",
+      "scale":{"zero":false},
+      "title":"Global CO2 Emission (metric ton per capita)"
+    },
+    "size":{
+    "aggregate": "sum",
+    "field": "Value",
+    "type": "quantitative",
+    "scale":{"zero":false},"legend":null}
+  },
+
+"config": {
+  "view": {
+    "stroke": null
+  }
+}}
+  
